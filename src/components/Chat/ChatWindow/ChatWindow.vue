@@ -6,6 +6,7 @@
 
 <script>
   import Message from './Message'
+  import {socketIO} from '../../../socketIO'
 
   export default {
     name: 'chatWindow',
@@ -27,6 +28,7 @@
       this.messages.push(Message)
       this.newMessage = {author: 'matiko101', date: '13.05.17', content: 'To jest wiadomosc numer 3'}
       this.messages.push(Message)
+      socketIO.init()
     }
   }
 </script>
